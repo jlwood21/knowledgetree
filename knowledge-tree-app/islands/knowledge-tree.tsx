@@ -1,6 +1,11 @@
+// islands/KnowledgeTree.tsx
+
 import { Head } from "$fresh/runtime.ts";
 import TemplateSelector from "../components/TemplateSelector.tsx";
 import { useState } from "preact/hooks";
+import TreeVisualization from "../components/TreeVisualization.tsx";
+import HouseVisualization from "../components/HouseVisualization.tsx";
+import PyramidVisualization from "../components/PyramidVisualization.tsx";
 
 export default function KnowledgeTree() {
   const [selectedTemplate, setSelectedTemplate] = useState<string | null>(null);
@@ -20,7 +25,10 @@ export default function KnowledgeTree() {
         <div>
           <h2 class="text-2xl font-bold mb-4">Selected Template: {selectedTemplate}</h2>
           <p>Now we can start building your {selectedTemplate}!</p>
-          {/* Placeholder for where the actual builder will be */}
+          {/* Render the appropriate visualization based on the selected template */}
+          {selectedTemplate === "Tree" && <TreeVisualization />}
+          {selectedTemplate === "House" && <HouseVisualization />}
+          {selectedTemplate === "Pyramid" && <PyramidVisualization />}
         </div>
       )}
     </div>
