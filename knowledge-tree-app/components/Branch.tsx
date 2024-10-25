@@ -1,6 +1,6 @@
 // Branch.tsx
 import { h } from "preact";
-import Leaf from "./Leaf";
+import Leaf from "./Leaf.tsx";
 
 export default function Branch({ x, y, title, leaves }) {
   return (
