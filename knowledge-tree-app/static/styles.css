@@ -1,0 +1,22 @@
+.tree-svg {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background: #f4f4f4;
+  }
+  
+  .tree-svg line {
+    transition: stroke-width 0.3s ease;
+  }
+  
+  .tree-svg line:hover {
+    stroke-width: 6;
+  }
+  
+  .tree-svg circle {
+    transition: transform 0.3s ease;
+  }
+  
+  .tree-svg circle:hover {
+    transform: scale(1.3);
+  }
+  
